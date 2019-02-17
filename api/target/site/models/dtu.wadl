@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<application xmlns="http://wadl.dev.java.net/2009/02"  xmlns:dtu1="urn:opendaylight:params:xml:ns:yang:dtu">
+
+	<grammars>
+		<include href="dtu.yang"/>
+	</grammars>
+	
+	<resources base="http://localhost:9998/restconf">
+		<resource path="operations">
+			<resource path="dtu:add-host-virtual-network">
+				<method name="POST">
+					<request>
+						<representation mediaType="application/xml" element="input"/>
+						<representation mediaType="text/xml" element="input"/>
+						<representation mediaType="application/json" element="input"/>
+						<representation mediaType="application/yang.data+xml" element="input"/>
+						<representation mediaType="application/yang.data+json" element="input"/>
+					</request>
+					<response>
+						<representation mediaType="application/xml" element="output"/>
+						<representation mediaType="text/xml" element="output"/>
+						<representation mediaType="application/json" element="output"/>
+						<representation mediaType="application/yang.data+xml" element="output"/>
+						<representation mediaType="application/yang.data+json" element="output"/>
+					</response>
+				</method>
+			</resource>
+		</resource>
+	</resources>
+</application>

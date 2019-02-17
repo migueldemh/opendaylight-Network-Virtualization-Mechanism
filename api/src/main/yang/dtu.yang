@@ -1,0 +1,26 @@
+module dtu {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:dtu";
+    prefix "dtu1";
+
+    revision "2015-01-05" {
+        description "Initial revision of hello model";
+    }
+    rpc add-host-virtual-network {
+        input {
+            leaf IP {
+                type string;
+            }
+            leaf Virtual-Network {
+                type string;
+            }
+        }
+
+
+        output {
+            leaf Tunnels {
+                type string;
+            }
+        }
+    }
+}

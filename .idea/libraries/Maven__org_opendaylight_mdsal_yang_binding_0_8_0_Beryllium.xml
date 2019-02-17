@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.opendaylight.mdsal:yang-binding:0.8.0-Beryllium">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/opendaylight/mdsal/yang-binding/0.8.0-Beryllium/yang-binding-0.8.0-Beryllium.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/opendaylight/mdsal/yang-binding/0.8.0-Beryllium/yang-binding-0.8.0-Beryllium-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/opendaylight/mdsal/yang-binding/0.8.0-Beryllium/yang-binding-0.8.0-Beryllium-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

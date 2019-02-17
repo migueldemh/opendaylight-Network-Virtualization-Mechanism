@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1468257429534
+Build-Jdk: 1.8.0_45
+Built-By: odldev
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.dtu.dtu-api
+Bundle-SymbolicName: org.opendaylight.dtu.api
+Bundle-Version: 0.1.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml
+ .ns.yang.dtu.rev150105;uses:="org.opendaylight.yangtools.concepts,org.o
+ pendaylight.yangtools.yang.binding,org.opendaylight.yangtools.yang.comm
+ on";version="0.1.0"
+Import-Package: org.opendaylight.yangtools.concepts;version="[0.7,1)",or
+ g.opendaylight.yangtools.yang.binding;version="[0.7,1)",org.opendayligh
+ t.yangtools.yang.common;version="[0.7,1)",org.opendaylight.yangtools.ya
+ ng.binding.annotations;version="[0.7,1)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607

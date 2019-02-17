@@ -1,0 +1,11 @@
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/DtuService.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/$YangModelBindingProvider.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkOutputBuilder.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkInputBuilder$AddHostVirtualNetworkInputImpl.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/$YangModuleInfoImpl.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkInput.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkOutputBuilder$AddHostVirtualNetworkOutputImpl.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkInputBuilder$1.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkOutput.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkInputBuilder.class
+org/opendaylight/yang/gen/v1/urn/opendaylight/params/xml/ns/yang/dtu/rev150105/AddHostVirtualNetworkOutputBuilder$1.class

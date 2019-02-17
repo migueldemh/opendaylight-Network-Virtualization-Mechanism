@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vi: set et smarttab sw=4 tabstop=4: -->
+<!--
+Copyright © 2016 Fotonik and others. All rights reserved.
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License v1.0 which accompanies this distribution,
+and is available at http://www.eclipse.org/legal/epl-v10.html
+-->
+<features name="odl-dtu-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+
+  <!--<repository>mvn:org.opendaylight.dlux/features-dlux/${dlux.version}/xml/features</repository>-->
+  <!--&lt;!&ndash;<repository>mvn:org.opendaylight.l2switch/features-l2switch/0.4.0-SNAPSHOT/xml/features</repository>&ndash;&gt;-->
+  <repository>mvn:org.opendaylight.controller/features-mdsal/${mdsal.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflow.plugin.version}/xml/features</repository>
+
+  <repository>mvn:org.opendaylight.yangtools/features-yangtools/${yangtools.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.controller/features-restconf/${mdsal.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.dlux/features-dlux/${dlux.version}/xml/features</repository>
+
+  <!--<repository>mvn:org.opendaylight.mdsal/features-mdsal/${mdsal.version}/xml/features</repository>-->
+  <!--<repository>mvn:org.opendaylight.mdsal.model/features-mdsal-model/${mdsal.version}/xml/features</repository>-->
+
+  <feature name='odl-dtu-all' version='${project.version}' description='OpenDaylight :: dtu :: all'>
+    <feature version='${project.version}'>odl-dtu-impl</feature>
+  </feature>
+
+
+  <feature name='odl-dtu-api' version='${project.version}' description='OpenDaylight :: dtu :: api'>
+    <feature version='${yangtools.version}'>odl-yangtools-models</feature>
+    <!--<feature version='${mdsal.version}'>odl-mdsal-binding-base</feature>-->
+    <bundle>mvn:org.opendaylight.dtu/dtu-api/${project.version}</bundle>
+  </feature>
+
+
+  <feature name='odl-dtu' version='${project.version}' description='OpenDaylight :: dtu'>
+    <feature version="${openflow.plugin.version}">odl-openflowplugin-southbound</feature>
+    <feature version="${openflow.plugin.version}">odl-openflowplugin-flow-services</feature>
+    <feature version="${mdsal.version}">odl-mdsal-broker</feature>
+    <feature version='${project.version}'>odl-dtu-api</feature>
+    <feature version="${mdsal.version}">odl-mdsal-remoterpc-connector</feature>
+    <!--utima linea incluida-->
+    <!--<bundle>mvn:org.opendaylight.dtu/dtu-api/${project.version}</bundle>-->
+    <!--utima linea incluida-->
+    <bundle>mvn:org.opendaylight.dtu/dtu-impl/${project.version}</bundle>
+    <configfile finalname="${config.configfile.directory}/${config.dtu.configfile}">
+    mvn:org.opendaylight.dtu/dtu-config/${project.version}/xml/config
+    </configfile>
+  </feature>
+
+  <feature name='odl-dtu-rest' version='${project.version}' description='OpenDaylight :: dtu :: REST'>
+    <feature version="${project.version}">odl-dtu</feature>
+    <feature version="${mdsal.version}">odl-restconf</feature>
+  </feature>
+  <feature name='odl-dtu-ui' version='${project.version}' description='OpenDaylight :: dtu :: UI'>
+    <feature version="${project.version}">odl-dtu-rest</feature>
+    <feature version="${mdsal.version}">odl-mdsal-apidocs</feature>
+    <feature version="${mdsal.version}">odl-mdsal-xsql</feature>
+    <feature version="${dlux.version}">odl-dlux-yangui</feature>
+  </feature>
+</features>

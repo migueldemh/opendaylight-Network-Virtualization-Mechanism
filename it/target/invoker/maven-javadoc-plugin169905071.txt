@@ -1,0 +1,67 @@
+Invoking Maven for the goals: [org.apache.maven.plugins:maven-javadoc-plugin:2.10.3:test-javadoc] with no properties
+
+M2_HOME=/usr/local/apache-maven-3.2.5
+MAVEN_OPTS=-Xmx2048m
+JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/..
+JAVA_OPTS=null
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building dtu-features 0.1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.10.3:test-javadoc (default-cli) > generate-test-sources @ dtu-features >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven) @ dtu-features ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.2.201409121644:prepare-agent (pre-unit-test) @ dtu-features ---
+[INFO] argLine set to -javaagent:/home/odldev/.m2/repository/org/jacoco/org.jacoco.agent/0.7.2.201409121644/org.jacoco.agent-0.7.2.201409121644-runtime.jar=destfile=/home/odldev/git/intento/dtu/features/target/code-coverage/jacoco.exec,excludes=**/gen/**:**/generated-sources/**:**/yang-gen/**:**/pax/**
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (check-license) @ dtu-features ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (default) @ dtu-features ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:unpack (unpack-license) @ dtu-features ---
+[INFO] Configured Artifact: org.opendaylight.odlparent:odl-license:0.1.0-SNAPSHOT:jar
+[INFO] Unpacking /home/odldev/.m2/repository/org/opendaylight/odlparent/odl-license/0.1.0-SNAPSHOT/odl-license-0.1.0-SNAPSHOT.jar to /home/odldev/git/intento/dtu/features/target/classes with includes "" and excludes "META-INF/**"
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:resolve (default) @ dtu-features ---
+[INFO] 
+[INFO] --- script-maven-plugin:1.0.0:execute (add-version-to-features) @ dtu-features ---
+[INFO] executing groovy script
+[INFO] Updating repository declarations
+[INFO] Processing feature: odl-dtu-api
+[INFO] Processing feature: odl-dtu
+[INFO] Processing feature: odl-dtu-rest
+[INFO] Processing feature: odl-dtu-ui
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-resource (default) @ dtu-features ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (filter) @ dtu-features ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/odldev/git/intento/dtu/features/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ dtu-features ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/odldev/git/intento/dtu/features/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ dtu-features ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.10.3:test-javadoc (default-cli) < generate-test-sources @ dtu-features <<<
+[INFO] 
+[INFO] --- maven-javadoc-plugin:2.10.3:test-javadoc (default-cli) @ dtu-features ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.141 s
+[INFO] Finished at: 2016-04-21T13:59:09+01:00
+[INFO] Final Memory: 74M/867M
+[INFO] ------------------------------------------------------------------------

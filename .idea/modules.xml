@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dtu-aggregator.iml" filepath="$PROJECT_DIR$/dtu-aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/dtu-api.iml" filepath="$PROJECT_DIR$/api/dtu-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/artifacts/dtu-artifacts.iml" filepath="$PROJECT_DIR$/artifacts/dtu-artifacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/dtu-config.iml" filepath="$PROJECT_DIR$/config/dtu-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/dtu-features.iml" filepath="$PROJECT_DIR$/features/dtu-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/impl/dtu-impl.iml" filepath="$PROJECT_DIR$/impl/dtu-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/it/dtu-it.iml" filepath="$PROJECT_DIR$/it/dtu-it.iml" />
+      <module fileurl="file://$PROJECT_DIR$/karaf/dtu-karaf.iml" filepath="$PROJECT_DIR$/karaf/dtu-karaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/dtu-parent.iml" filepath="$PROJECT_DIR$/parent/dtu-parent.iml" />
+    </modules>
+  </component>
+</project>

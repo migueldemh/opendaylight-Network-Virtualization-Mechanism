@@ -1,0 +1,69 @@
+module dtu-impl {
+    yang-version 1;
+    namespace "urn:opendaylight:dtu:dtu-impl";
+    prefix "dtu-impl";
+
+    import config { prefix config; revision-date 2013-04-05; }
+    import opendaylight-md-sal-binding { prefix md-sal-binding; revision-date 2013-10-28;}
+
+    description
+        "Service definition for dtu project";
+
+    revision "2014-12-10" {
+        description
+            "Initial revision";
+    }
+
+    identity dtu-impl{
+        base config:module-type;
+        config:java-name-prefix Dtu;
+    }
+
+       augment "/config:modules/config:module/config:configuration" {
+               case dtu-impl {
+                   when "/config:modules/config:module/config:type = 'dtu-impl'";
+               // data broker service
+                    container data-broker {
+                        uses config:service-ref {
+                             refine type {
+                                 mandatory false;
+                                 config:required-identity md-sal-binding:binding-async-data-broker;
+                             }
+                        }
+                    }
+
+                    // notification service
+                    container notification-service {
+                         uses config:service-ref {
+                             refine type {
+                                 mandatory true;
+                                 config:required-identity md-sal-binding:binding-notification-service;
+                             }
+                         }
+                    }
+           // rpc registry
+                        container rpc-registry {
+                          uses config:service-ref {
+                            refine type {
+                               mandatory true;
+                               config:required-identity md-sal-binding:binding-rpc-registry;
+                            }
+                          }
+                        }
+
+
+
+
+            container broker {
+                uses config:service-ref {
+                    refine type {
+                        mandatory true;
+                        config:required-identity md-sal-binding:binding-broker-osgi-registry;
+                    }
+                }
+            }
+          }//aqui el case
+           }//aqui acaba el augment
+         }
+
+

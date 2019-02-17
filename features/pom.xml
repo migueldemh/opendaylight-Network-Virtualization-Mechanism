@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright © 2015 DTU Fotonik and others. All rights reserved.
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License v1.0 which accompanies this distribution,
+and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.opendaylight.dtu</groupId>
+    <artifactId>dtu-parent</artifactId>
+    <relativePath>../parent</relativePath>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+    <features.file>features.xml</features.file>
+  </properties>
+
+  <groupId>org.opendaylight.dtu</groupId>
+  <artifactId>dtu-features</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>dtu-features</name>
+  <packaging>jar</packaging>
+
+  <prerequisites>
+    <maven>3.1.1</maven>
+  </prerequisites>
+  <dependencyManagement>
+    <dependencies>
+      <!-- project specific dependencies -->
+      <dependency>
+        <groupId>org.opendaylight.controller</groupId>
+        <artifactId>mdsal-artifacts</artifactId>
+        <version>${mdsal.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.opendaylight.yangtools</groupId>
+      <artifactId>features-yangtools</artifactId>
+      <classifier>features</classifier>
+      <version>${yangtools.version}</version>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>features-mdsal</artifactId>
+      <classifier>features</classifier>
+      <version>${mdsal.version}</version>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>features-restconf</artifactId>
+      <classifier>features</classifier>
+      <version>${mdsal.version}</version>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.dlux</groupId>
+      <artifactId>features-dlux</artifactId>
+      <classifier>features</classifier>
+      <version>${dlux.version}</version>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>dtu-impl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>dtu-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+
+    <!-- Policymanager dependencies -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>dtu-impl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>dtu-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.dtu</groupId>
+      <artifactId>dtu-config</artifactId>
+      <version>${project.version}</version>
+      <type>xml</type>
+      <classifier>config</classifier>
+    </dependency>
+
+    <!--  ODL dependencies  -->
+
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>features-restconf</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.dlux</groupId>
+      <artifactId>features-dlux</artifactId>
+      <version>${dlux.version}</version>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.yangtools</groupId>
+      <artifactId>features-yangtools</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.opendaylight.controller</groupId>-->
+      <!--<artifactId>features-mdsal</artifactId>-->
+      <!--<classifier>features</classifier>-->
+      <!--<type>xml</type>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>features-mdsal</artifactId>
+      <classifier>features</classifier>
+      <version>${mdsal.version}</version>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!--  Dependencies for Openflow and L2Switch -->
+    <!--<dependency>-->
+      <!--<groupId>org.opendaylight.l2switch</groupId>-->
+      <!--<artifactId>features-l2switch</artifactId>-->
+      <!--<version>0.2.2-Lithium-SR2</version>-->
+      <!--<classifier>features</classifier>-->
+      <!--<type>xml</type>-->
+    <!--</dependency>-->
+
+
+    <!-- test to validate features.xml -->
+    <!--<dependency>-->
+      <!--<groupId>org.opendaylight.yangtools</groupId>-->
+      <!--<artifactId>features-test</artifactId>-->
+      <!--<version>${feature.test.version}</version>-->
+    <!--</dependency>-->
+    <!-- dependency for opendaylight-karaf-empty for use by testing -->
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>opendaylight-karaf-empty</artifactId>
+      <version>${karaf.empty.version}</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>org.sdnhub.odl.tutorial</groupId>
+      <artifactId>utils</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/features</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>filter</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>${project.build.directory}/classes/${features.file}</file>
+                  <type>xml</type>
+                  <classifier>features</classifier>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+
+
+</project>
